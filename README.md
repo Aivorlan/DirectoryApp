@@ -9,6 +9,12 @@ A react directory that allows the user to view their entire employee directory a
 An employee or manager would benefit greatly from being able to view non-sensitive data about other employees. It would be particularly helpful to be able to filter employees by name.
 
 ## Installation
+* npm init
+* install 
+* axios
+* react
+* react bootstrap and dom
+
 
 ## Acceptance Criteria
 
