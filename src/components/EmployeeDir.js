@@ -70,3 +70,43 @@ class EmployeeDir extends Component {
       }
     }
   
+    /
+    render() {
+  
+        return (
+    
+            <div className="container-fluid">
+              <h1>Employee Directory</h1>
+              <Search searchTerm={this.state.searchTerm} handleInputChange={this.handleInputChange} />
+              <table className="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Photo</th>
+                    <th onClick={() => { this.handleClickEvent() }} scope="col" className={`${this.state.sortType === "asc" ? "stylesAsc" : "stylesDesc"} hover`}>Name</th>
+    
+                    <th onClick={() => { this.handleClickEvent() }} scope="col" className={`${this.state.sortType === "asc" ? "stylesAsc" : "stylesDesc"} hover`}>Email</th>
+                    <th scope="col">Phone</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {this.state.filteredArr.map((employee, index) => {
+                    return (
+                      <tr key={employee.email}>
+                        <th scope="row">{index + 1}</th>
+                        <td><img src={employee.picture.medium} alt={employee.name.first} /></td>
+                        <td>{employee.name.first} {employee.name.last}</td>
+                        <td>{employee.email}</td>
+                        <td>{employee.phone}</td>
+                      </tr>
+                    )
+                  })}
+                </tbody>
+              </table>
+            </div>
+    
+        );
+      }
+    }
+    
+    export default EmployeeDir 
