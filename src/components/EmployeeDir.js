@@ -40,4 +40,16 @@ class EmployeeDir extends Component {
     });
 
   };
-  
+
+  handleClickEvent = () => {
+    let ascSort = [...this.state.filteredArr].sort((a, b) => {
+      if (a.name.last.toLowerCase() < b.name.last.toLowerCase()) {
+        return -1;
+      }
+      if (a.name.last.toLowerCase() > b.name.last.toLowerCase()) {
+        return 1;
+      }
+      return 0;
+    });
+
+    
