@@ -2,7 +2,9 @@
     background-color: rgb(154, 192, 204);
     cursor: pointer;
   }
-
+h1{
+    background-color: crimson;
+}
   .App {
     text-align: center;
     display: flex;
