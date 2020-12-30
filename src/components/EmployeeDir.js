@@ -63,3 +63,10 @@ class EmployeeDir extends Component {
       });
       
       
+      if (this.state.sortType === "asc") {
+        this.setState({ sortType: "desc", filteredArr: descSort }) //if the sortType is asc, turn it to desc and assign descSort to filtered array 
+      } else {
+        this.setState({ sortType: "asc", filteredArr: ascSort })
+      }
+    }
+  
