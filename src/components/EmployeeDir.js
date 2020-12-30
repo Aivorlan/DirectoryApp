@@ -52,4 +52,14 @@ class EmployeeDir extends Component {
       return 0;
     });
 
-    
+    let descSort = [...this.state.filteredArr].sort((a, b) => {
+        if (a.name.last.toLowerCase() > b.name.last.toLowerCase()) {
+          return -1;
+        }
+        if (a.name.last.toLowerCase() < b.name.last.toLowerCase()) {
+          return 1;
+        }
+        return 0;
+      });
+      
+      
